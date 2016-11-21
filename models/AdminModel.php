@@ -6,13 +6,11 @@ class UserModel extends Model {
     public $name;
     public $email;
     public $password;
-    public $role;
 
     public function __construct($name, $email, $password, $role){
         $this->name = $name;
         $this->email = $email;
         $this->password = $this->encrypt($password);
-        $this->role = $role;
     }
 
     public function encrypt($password) {
